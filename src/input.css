@@ -3,3 +3,43 @@
 @tailwind utilities;
 
 
+ /* Styles for the recent searches dropdown */
+ .recent-searches {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 28%;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  top: 210px;
+  left: 30px;
+  display: none; /* Hidden by default */
+}
+
+/* Styling each search item in the dropdown */
+.search-item {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Media query for screen width greater than 950px */
+@media (min-width: 950px) {
+  .content{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    
+  }
+}
+@media (max-width: 650px) {
+#forecast{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  
+}
+}
+

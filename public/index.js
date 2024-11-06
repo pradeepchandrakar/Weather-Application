@@ -94,7 +94,8 @@ function getWeatherByCity(cityName) {
       if (!response.ok) {  // Handle non-OK responses
         throw new Error(`Error: ${response.status} - ${response.statusText}`);
       }
-      return response.json();  // Parse JSON response
+      return response.json(); 
+      // Parse JSON response
     })
     .then(data => {
       if (data.cod !== 200) {  // Handle case if city is not found
@@ -165,7 +166,9 @@ function get5DayForecastByCoords(lat, lon) {
 
 // Update current weather information on the UI
 function updateCurrentWeather(data) {
-  document.getElementById("cityNames").innerText = `${data.name}`;  // Display the city name
+  
+  
+  document.getElementById("cityNames").innerText = `${data.name} ( ${ data.sys.country } ) `;  // Display the city name
   document.getElementById("dynamic-image").src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;  // Set the weather icon
   document.getElementById("sky").innerText = `${data.weather[0].description}`;  // Display weather description
   document.getElementById("weather-data").innerHTML = `  <!-- Display temperature, wind speed, humidity, and condition -->

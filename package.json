@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "run": "npx tailwindcss -i ./src/input.css -o ./public/output.css --watch"
+    "rundev": "npx tailwindcss -i ./src/input.css -o ./public/output.css --watch"
   },
   "keywords": [],
   "author": "",

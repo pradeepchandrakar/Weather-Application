@@ -1,6 +1,6 @@
 
 
-# Weather Dashboard
+# Weather Application
 
 A dynamic weather application built using **HTML**, **CSS**, and **JavaScript**. This app allows users to check the current weather conditions and a 5-day weather forecast for any city, and it also provides the option to use the user's **current location** for weather updates. Additionally, it stores the last 5 recent city searches for quick access.
 
@@ -28,7 +28,7 @@ Follow these steps to get the app running on your local machine:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/weather-app.git
+   git clone https://github.com/pradeepchandrakar/Weather-Application
    ```
    
 2. **Navigate into the project folder**:
