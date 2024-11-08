@@ -1,4 +1,5 @@
-// Get references to necessary DOM elements
+
+
 const city = document.querySelector("input");  // Input field for city name
 const searchButton = document.querySelector(".search");  // Search button for fetching weather data
 const currentLocationButton = document.querySelector(".curentLocation");  // Button to use current location
@@ -15,6 +16,13 @@ let recentSearches = JSON.parse(localStorage.getItem('recentSearches')) || [];
 // Show recent searches when the input field is clicked
 city.addEventListener("click", () => {
   showRecentSearches();  // Display the recent searches
+});
+
+// Add event listener for Enter key to trigger the search button
+city.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {  // Check if Enter key is pressed
+    searchButton.click();  // Trigger search button click event
+  }
 });
 
 // Function to display recent searches in a dropdown
@@ -69,6 +77,8 @@ searchButton.addEventListener("click", () => {
   updateRecentSearches(cityName);
   city.value = "";
 });
+
+
 
 // Event listener for the "Use Current Location" button to fetch weather based on user's geolocation
 currentLocationButton.addEventListener("click", () => {
